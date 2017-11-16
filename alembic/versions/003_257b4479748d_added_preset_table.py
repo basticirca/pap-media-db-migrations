@@ -1,8 +1,8 @@
 """added preset table
 
-Revision ID: 003_45a51fef73ca
+Revision ID: 003_257b4479748d
 Revises: 002_88971660dfff
-Create Date: 2017-11-16 23:15:48.613000
+Create Date: 2017-11-16 23:29:14.673000
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as db
 
 
 # revision identifiers, used by Alembic.
-revision = '003_45a51fef73ca'
+revision = '003_257b4479748d'
 down_revision = '002_88971660dfff'
 branch_labels = None
 depends_on = None
@@ -19,6 +19,7 @@ depends_on = None
 def upgrade():
     op.create_table('preset',
       db.Column('id', db.Integer(), nullable=False),
+      db.Column('name', db.String(length=256), nullable=False),
       db.Column('json', db.String(length=4096), nullable=False),
       db.PrimaryKeyConstraint('id')
     )
