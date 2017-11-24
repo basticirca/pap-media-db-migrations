@@ -44,7 +44,7 @@ def process_revision_directives(context, revision, directives):
                 remove_ops.append(column_op)
                 msg = "INFO  [custom process revision directives] Removing misinterpreted type change on"
                 msg += " '" + str(column_op.table_name) + "." + str(column_op.column_name) + "'"
-                print msg
+                print(msg)
         temp = [column_op for column_op in table_op.ops if column_op not in remove_ops]
         table_op.ops[:] = temp
         if len(temp) == 0:
