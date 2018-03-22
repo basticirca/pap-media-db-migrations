@@ -1,2 +1,2 @@
-# pap-media-sqlalchemy-db
-Repository to migrate pap-media database across versions 
+# companion-sqlalchemy-db
+Repository to migrate companion database across versions 
